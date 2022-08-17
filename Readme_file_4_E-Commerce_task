@@ -3,7 +3,7 @@
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 
-1. 1. Histogram for delivery time records.
+1. Histogram for delivery time records.
 	
 	first of we have to consider bin size according to requirements,
 	like if we need to make a bin of 0-1 day delivery we have to use '1',
