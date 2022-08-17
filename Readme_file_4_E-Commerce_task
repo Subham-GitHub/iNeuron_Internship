@@ -30,3 +30,21 @@
   and go to the format control where we can see the input range(range which has to be shown in drop down list) and
   cell link(cell refelct the index value for the selected item), using cell link value we can formulate the sales, profit and order records dynamically when we change
   the drop down list in the dashboard.
+
+3. Visual Prepartion.
+
+	For making dynamically changing visual we have to link the combo box value to the formulation of sales,
+	orders and profit. Using the offset formula we have to get the drop down list value as per the category.
+	So to return that we have to use 
+	
+	OFFSET(reference,rows,columns)
+	Reference:[from where we have to look data for i.e coulmn header]
+	Rows: Value for search in rows [in number] select the cell link cell which returns index for selected
+	category if not to move in row put 0.
+	Columns: Value for search in column [in number] if not have to move in column put 0.
+
+	Now using sumifs formula to find sales, orders and profit month wise and region wise considering category
+	as well.
+
+	Select the table where we have calculated the monthly sales and profit to plot the bar graph and same for
+	regional wise sales and copy both charts to dashboard. 
