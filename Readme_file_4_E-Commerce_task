@@ -3,15 +3,15 @@
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 
-1. Histogram for delivery time records.
+1. 1. Histogram for delivery time records.
 	
 	first of we have to consider bin size according to requirements,
 	like if we need to make a bin of 0-1 day delivery we have to use '1',
 	when 2-5 then use '5' and 6-9 then use '9'.
 
-	we have to make column(say frequency) have 1,5,9,... value in it as per required and then proceed towards data analysis options
-  from data ribbon,After that a pop window will open up requiring data(select desired data) to plot the bar chart using bins(select the frequency column)
-  and select the space where we have to generate the bins and bin size column in the sheet and select the graph to be ploted in desired worksheet/workbook.
+	we have to make column (say frequency) have 1,5,9,... value in it as per required and then proceed towards data analysis options from 
+	data ribbon, After that a pop window will open up requiring data(select desired data) to plot the bar chart using bins(select the frequency column) 
+	and select the space where we have to generate the bins and bin size column in the sheet and select the graph to be plotted in desired worksheet/workbook.
 
 	Make changes in columns generated to show exact things in the chart.
 	
@@ -19,32 +19,32 @@
 
 2. Prepare Sale and profit records.
 
-	a) Distinct product category: In the main sheet of records we have to check the distinct items from the category columns. To get that we have used the
-  advanced sort and filtering options from the data ribbon and reflect it in other column and copy that distnict product and use it in our working space 
-  sheet where we have to apply fitters based on the conditions or apply combinations of filters. 
-  
-  ***Same has to be done for Months and Regions for our different charts like monthly and region wise sales visuals.***
+	a) Distinct product category: In the main sheet of records, we have to check the distinct items from the category columns. To get that we have used the 
+	advanced sort and filtering options from the data ribbon and reflect it in other column and copy that distinct product and use it in our working space 
+	sheet where we have to apply fitters based on the conditions or apply combinations of filters.
+	Same has to be done for Months and Regions for our different charts like monthly and region wise sales visuals.
 
-	b) Use of drop down menu for category listing: In dashboard we have to create a dropdown menu to select from the category, so we have to insert the 'Combo Box' 
-  from controls option found under Developer ribbon, using that we can select the list from the dropdown box. To activate this we have to right click on the Combo Box
-  and go to the format control where we can see the input range(range which has to be shown in drop down list) and
-  cell link(cell refelct the index value for the selected item), using cell link value we can formulate the sales, profit and order records dynamically when we change
-  the drop down list in the dashboard.
+	b) Use of drop-down menu for category listing: In dashboard we have to create a dropdown menu to select from the category, so we have to insert the
+	'Combo Box' from controls option found under Developer ribbon, using that we can select the list from the dropdown box. To activate this, we have to 
+	right click on the Combo Box and go to the format control where we can see the input range (range which has to be shown in drop down list) and 
+	cell link (cell reflect the index value for the selected item), using cell link value we can formulate the sales, profit and order records dynamically
+	when we change the drop-down list in the dashboard.
 
-3. Visual Prepartion.
+3. Visual Preparation.
 
 	For making dynamically changing visual we have to link the combo box value to the formulation of sales,
-	orders and profit. Using the offset formula we have to get the drop down list value as per the category.
-	So to return that we have to use 
+	orders and profit. Using the offset formula, we have to get the drop-down list value as per the category.
+	So, to return that we have to use 
 	
-	OFFSET(reference,rows,columns)
-	Reference:[from where we have to look data for i.e coulmn header]
+	OFFSET (reference, rows, columns)
+	Reference: [from where we have to look data for i.e., column header]
 	Rows: Value for search in rows [in number] select the cell link cell which returns index for selected
 	category if not to move in row put 0.
 	Columns: Value for search in column [in number] if not have to move in column put 0.
 
-	Now using sumifs formula to find sales, orders and profit month wise and region wise considering category
+	Now using SUMIFS formula to find sales, orders and profit month wise and region wise considering category
 	as well.
 
 	Select the table where we have calculated the monthly sales and profit to plot the bar graph and same for
 	regional wise sales and copy both charts to dashboard. 
+
